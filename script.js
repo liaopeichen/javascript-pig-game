@@ -14,6 +14,32 @@ const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
 
 // Defining Functions
+const init = function () {
+  totalScores = [0, 0];
+  currentScore = 0;
+  activePlayer = Math.round(Math.random());
+  gameOver = false;
+
+  current0El.textContent = 0;
+  current1El.textContent = 0;
+  score0El.textContent = 0;
+  score1El.textContent = 0;
+
+  diceEl.classList.add('hidden');
+  player0El.classList.remove('player--winner');
+  player1El.classList.remove('player--winner');
+  btnRoll.classList.remove('disabled-button');
+  btnHold.classList.remove('disabled-button');
+
+  if (activePlayer === 0) {
+    player0El.classList.add('player--active');
+    player1El.classList.remove('player--active');
+  } else {
+    player0El.classList.remove('player--active');
+    player1El.classList.add('player--active');
+  }
+};
+
 const switchPlayer = function () {
   currentScore = 0;
   document.getElementById(`current--${activePlayer}`).textContent = 0;
@@ -21,6 +47,7 @@ const switchPlayer = function () {
   player0El.classList.toggle('player--active');
   player1El.classList.toggle('player--active');
 };
+
 const gameOverSetting = function () {
   btnRoll.setAttribute('aria-disabled', 'true');
   btnRoll.setAttribute('tabindex', '-1');
@@ -33,10 +60,8 @@ const gameOverSetting = function () {
 };
 
 // Starting Conditions
-const totalScores = [0, 0];
-let currentScore = 0;
-let activePlayer = 0;
-let gameOver = false;
+let totalScores, currentScore, activePlayer, gameOver;
+init();
 
 // Rolling Dice Functionality
 btnRoll.addEventListener('click', () => {
@@ -72,7 +97,7 @@ btnHold.addEventListener('click', () => {
       totalScores[activePlayer];
 
     // 2. Check if player's score is >= 100
-    if (totalScores[activePlayer] >= 20) {
+    if (totalScores[activePlayer] >= 100) {
       // if true: Finish the game
       gameOver = true;
       gameOverSetting();
@@ -89,3 +114,6 @@ btnHold.addEventListener('click', () => {
     }
   }
 });
+
+// Resetting Game Functionality
+btnNew.addEventListener('click', init);
