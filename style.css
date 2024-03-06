@@ -129,8 +129,11 @@ main {
   margin-right: 0.7rem;
 }
 
+.btn--quit {
+  top: 6rem;
+}
 .btn--new {
-  top: 4rem;
+  top: 12.8rem;
 }
 .btn--roll {
   top: 39.3rem;
@@ -151,7 +154,7 @@ main {
 .dice {
   position: absolute;
   left: 50%;
-  top: 16.5rem;
+  top: 23rem;
   transform: translateX(-50%);
   height: 10rem;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
@@ -173,4 +176,159 @@ main {
 .disabled-button {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media all and (max-width: 992px) {
+  body {
+    height: 150vh;
+  }
+
+  html {
+    font-size: 0.6em;
+  }
+
+  .player {
+    padding: 5rem;
+  }
+
+  .player h2 {
+    font-size: 2.5rem;
+  }
+
+  .player .score {
+    margin-bottom: 6rem;
+  }
+
+  .btn {
+    position: absolute;
+    font-size: 1.4rem;
+  }
+
+  .btn--quit {
+    top: 2rem;
+  }
+
+  .btn--new {
+    top: 8rem;
+  }
+
+  .btn--roll {
+    top: 27.5rem;
+  }
+
+  .btn--hold {
+    top: 33.5rem;
+  }
+
+  .dice {
+    top: 39vh;
+  }
+}
+
+@media all and (max-width: 768px) {
+  body {
+    height: 150vh;
+  }
+
+  html {
+    font-size: 0.6em;
+  }
+
+  .player {
+    padding: 5rem;
+  }
+
+  .player h2 {
+    font-size: 2.5rem;
+  }
+
+  .player .score {
+    margin-bottom: 6rem;
+  }
+
+  .btn {
+    position: absolute;
+    font-size: 1.4rem;
+  }
+
+  .btn--quit {
+    top: 2rem;
+  }
+
+  .btn--new {
+    top: 8rem;
+  }
+
+  .btn--roll {
+    top: 27.5rem;
+  }
+
+  .btn--hold {
+    top: 33.5rem;
+  }
+
+  .dice {
+    top: 39vh;
+  }
+}
+
+@media all and (max-width: 576px) {
+  html {
+    font-size: 0.4em;
+  }
+
+  .btn {
+    position: absolute;
+
+    font-size: 1.4rem;
+  }
+
+  .btn-new {
+    top: 22vh;
+  }
+
+  .btn-roll {
+    bottom: 25vh;
+    font-size: 1.2rem;
+  }
+
+  .btn-hold {
+    bottom: 21vh;
+    font-size: 1.2rem;
+  }
+
+  .dice {
+    top: 26vh;
+  }
+}
+
+@media all and (max-width: 400px) {
+  html {
+    font-size: 0.3em;
+  }
+
+  body {
+    height: 150vh;
+  }
+
+  .player {
+    padding: 3rem;
+  }
+
+  .player .score {
+    margin-bottom: 10rem;
+  }
+
+  .btn {
+    position: absolute;
+    font-size: 1rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .dice {
+    top: 20vh;
+    width: 40px;
+    height: 40px;
+  }
 }
