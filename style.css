@@ -312,6 +312,14 @@ main {
     height: 100vh;
   }
 
+  .player {
+    padding: 3rem;
+  }
+
+  .player .score {
+    margin-bottom: 10rem;
+  }
+
   .btn {
     position: absolute;
 
@@ -319,6 +327,6 @@ main {
   }
 
   .dice {
-    top: 12vh;
+    top: 17vh;
   }
 }
