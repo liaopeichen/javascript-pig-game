@@ -309,7 +309,7 @@ main {
   }
 
   body {
-    height: 50vh;
+    height: 100vh;
   }
 
   .player {
@@ -323,10 +323,11 @@ main {
   .btn {
     position: absolute;
     font-size: 1rem;
+    padding: 0.4rem 2rem;
   }
 
   .dice {
-    top: 17vh;
+    top: 25vh;
     width: 30px;
     height: 30px;
   }
