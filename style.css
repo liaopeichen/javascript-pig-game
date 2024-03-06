@@ -322,11 +322,12 @@ main {
 
   .btn {
     position: absolute;
-
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
 
   .dice {
     top: 17vh;
+    width: 30px;
+    height: 30px;
   }
 }
