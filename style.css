@@ -181,7 +181,7 @@ main {
 /* Responsive Design */
 @media all and (max-width: 992px) {
   body {
-    height: 150vh;
+    height: 75vh;
   }
 
   html {
@@ -222,7 +222,7 @@ main {
   }
 
   .dice {
-    top: 39vh;
+    top: 13.5vh;
   }
 }
 
