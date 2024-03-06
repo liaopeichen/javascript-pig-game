@@ -308,6 +308,10 @@ main {
     font-size: 0.3em;
   }
 
+  body {
+    height: 50vh;
+  }
+
   .btn {
     position: absolute;
 
@@ -315,6 +319,6 @@ main {
   }
 
   .dice {
-    top: 20vh;
+    top: 12vh;
   }
 }
